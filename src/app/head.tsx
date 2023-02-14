@@ -6,5 +6,5 @@ export default function Head() {
       <meta name="description" content="TODO: write a description" />
       <link rel="icon" href="/favicon.ico?TODO-MAKE-A-LOGO" />
     </>
-  )
+  );
 }
