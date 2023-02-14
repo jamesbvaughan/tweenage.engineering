@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 import Footer from "./footer";
 import { inter, berkeleyMono } from "./fonts";
+import { AnalyticsWrapper } from "./analytics";
 
 export default function RootLayout({
   children,
@@ -26,6 +27,8 @@ export default function RootLayout({
           <hr className="border-t border-1 border-gray-800 my-4" />
           <Footer />
         </div>
+
+        <AnalyticsWrapper />
       </body>
     </html>
   );
