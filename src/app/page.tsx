@@ -9,18 +9,18 @@ export default function Home() {
         <div className="text-center space-y-6">
           <h1>MEADOW DESK V1</h1>
           <p>
-            a space frame constructed from anodized aluminum
-            and assembled with formica-laminated plywood,
-            meadow desk is your very own modular workspace
+            a space frame constructed from anodized aluminum and assembled with
+            formica-laminated plywood, meadow desk is your very own modular
+            workspace
           </p>
         </div>
 
-        <Image src={meadowDeskPic} priority alt="the meadow desk" className="order-first md:order-last" />
-      </div>
-
-      <div className="text-center">
-        <h2>what is this?</h2>
-        <p>blah blah blah</p>
+        <Image
+          src={meadowDeskPic}
+          priority
+          alt="the meadow desk"
+          className="order-first md:order-last"
+        />
       </div>
     </main>
   );

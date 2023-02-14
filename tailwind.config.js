@@ -27,6 +27,7 @@ module.exports = {
         900: "#3c3836",
       },
       black: "#282828",
+      dark: "#1d2021",
       white: "#ebdbb2",
       transparent: "transparent",
     },
@@ -37,5 +38,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

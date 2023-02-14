@@ -1,43 +1,10 @@
 import "./globals.css";
 import Header from "./header";
 
-import localFont from "@next/font/local";
 import classNames from "classnames";
 
-import { Inter } from "@next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const berkeleyMono = localFont({
-  src: [
-    {
-      path: "./fonts/BerkeleyMono-Regular.woff2",
-      style: "normal",
-      weight: "400",
-    },
-    {
-      path: "./fonts/BerkeleyMono-Bold.woff2",
-      style: "normal",
-      weight: "700",
-    },
-    {
-      path: "./fonts/BerkeleyMono-Italic.woff2",
-      style: "italic",
-      weight: "400",
-    },
-    {
-      path: "./fonts/BerkeleyMono-BoldItalic.woff2",
-      style: "italic",
-      weight: "700",
-    },
-  ],
-  variable: "--font-berkeley-mono",
-  display: "swap",
-});
+import Footer from "./footer";
+import { inter, berkeleyMono } from "./fonts";
 
 export default function RootLayout({
   children,
@@ -51,10 +18,13 @@ export default function RootLayout({
     >
       <head />
 
-      <body className="text-white bg-black">
-        <div className="mx-auto w-10/12">
+      <body className="text-white bg-black mb-6">
+        <div className="mx-auto md:w-10/12 w-11/12">
           <Header />
           {children}
+
+          <hr className="border-t border-1 border-gray-800 my-4" />
+          <Footer />
         </div>
       </body>
     </html>
