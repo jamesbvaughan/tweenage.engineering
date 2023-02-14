@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import meadowDeskPic from "../../public/meadow-desk.jpg";
+import meadowDeskPic from "../public/meadow-desk.jpg";
 
 export default function Home() {
   return (

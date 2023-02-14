@@ -1,11 +1,11 @@
 import "./globals.css";
-import Header from "./header";
 
 import classNames from "classnames";
 
-import Footer from "./footer";
 import { inter, berkeleyMono } from "./fonts";
-import { AnalyticsWrapper } from "./analytics";
+import { AnalyticsWrapper } from "./AnalyticsWrapper";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function RootLayout({
   children,

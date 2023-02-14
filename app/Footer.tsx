@@ -1,4 +1,4 @@
-import TinyletterForm from "./tinyletter";
+import TinyletterForm from "./TinyletterForm";
 
 export default function Footer() {
   return (
