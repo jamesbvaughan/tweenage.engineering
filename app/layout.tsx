@@ -20,11 +20,13 @@ export default function RootLayout({
       <head />
 
       <body className="text-white bg-black mb-6">
-        <div className="mx-auto md:w-10/12 w-11/12">
+        <div className="mx-auto md:w-10/12 w-11/12 space-y-5">
           <Header />
+
           {children}
 
-          <hr className="border-t border-1 border-gray-800 my-4" />
+          <hr className="border-t border-1 border-gray-800" />
+
           <Footer />
         </div>
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -11,19 +11,27 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.11",
+    "@headlessui/tailwindcss": "^0.1.2",
     "@heroicons/react": "^2.0.15",
     "@next/font": "^13.1.6",
+    "@react-three/drei": "^9.56.25",
+    "@react-three/fiber": "^8.11.2",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.10",
+    "@types/three": "^0.149.0",
     "@vercel/analytics": "^0.1.8",
     "classnames": "^2.3.2",
+    "convert": "^4.10.0",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.5"
+    "three": "^0.149.0",
+    "typescript": "4.9.5",
+    "zustand": "^4.3.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
@@ -33,6 +41,7 @@
     "lint-staged": "^13.1.2",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3",
     "tailwindcss": "^3.2.6"
   }
 }

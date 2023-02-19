@@ -8,7 +8,7 @@ export default function Home() {
       <div className="grid-cols-1 md:grid-cols-2 grid items-center gap-8">
         <div className="text-center space-y-6">
           <h1>MEADOW DESK V1</h1>
-          <p>
+          <p className="text-xl font-light">
             a space frame constructed from anodized aluminum and assembled with
             formica-laminated plywood, meadow desk is your very own modular
             workspace
