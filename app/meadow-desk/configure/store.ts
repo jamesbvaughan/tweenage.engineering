@@ -32,6 +32,8 @@ export interface ConfiguratorState {
   desktopThickness: number;
 
   railHeight: number;
+
+  scaleReference: "hotdog" | "none";
 }
 
 const defaultState: ConfiguratorState = {
@@ -42,6 +44,7 @@ const defaultState: ConfiguratorState = {
   desktopPlacement: "top",
   desktopThickness: threeQuarterInch,
   railHeight: inch,
+  scaleReference: "none",
 };
 
 // TODO: persist this in the URL

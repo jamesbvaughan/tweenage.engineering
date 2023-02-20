@@ -6,7 +6,6 @@ const HeaderLink = (props: PropsWithChildren<LinkProps>) => {
     <Link
       {...props}
       className="text-lg hover:text-gray-400"
-    // activeClassName="underlint"
     />
   );
 };
@@ -22,7 +21,7 @@ export default function Header() {
       </Link>
 
       <div className="flex space-x-6">
-        <HeaderLink href="/configure">configure yours</HeaderLink>
+        <HeaderLink href="/meadow-desk/configure">configuration tool</HeaderLink>
         <HeaderLink href="/about">about</HeaderLink>
       </div>
     </div>

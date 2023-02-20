@@ -5,14 +5,24 @@ import meadowDeskPic from "../public/meadow-desk.jpg";
 export default function Home() {
   return (
     <main className="space-y-10">
-      <div className="grid-cols-1 md:grid-cols-2 grid items-center gap-8">
-        <div className="text-center space-y-6">
-          <h1>MEADOW DESK V1</h1>
+      <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <div className="space-y-6 text-center">
+          <h1 className="font-mono">MEADOW DESK</h1>
+
           <p className="text-xl font-light">
-            a space frame constructed from anodized aluminum and assembled with
-            formica-laminated plywood, meadow desk is your very own modular
+            an open frame constructed from anodized aluminum and assembled with
+            a desktop of your choice, meadow desk is your very own modular
             workspace
           </p>
+
+          <div>
+            <a
+              href="/meadow-desk/configure"
+              className="text-xl hover:text-gray-400"
+            >
+              configure yours
+            </a>
+          </div>
         </div>
 
         <Image

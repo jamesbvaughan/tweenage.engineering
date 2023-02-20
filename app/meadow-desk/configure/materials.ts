@@ -4,9 +4,14 @@ const loader = new TextureLoader();
 
 export const aluminumMaterial = new MeshStandardMaterial({
   color: "rgb(171, 171, 171)",
-  roughness: 0.6,
+  roughness: 0.5,
   metalness: 0.8,
 });
+
+export const rubberMaterial = new MeshStandardMaterial({
+  color: "#111111",
+  roughness: 0.9,
+})
 
 const woodColor = "#b7924d";
 

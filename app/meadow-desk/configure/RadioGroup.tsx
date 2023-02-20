@@ -1,8 +1,10 @@
 import { RadioGroup } from "@headlessui/react";
+import InputLabel from "./InputLabel";
 
 interface RadioGroupOption {
-  value: string | number;
+  value: string | number | object;
   name: string;
+  title?: string;
 }
 
 const ConfiguratorRadioGroup = <TOption extends RadioGroupOption>({
@@ -13,19 +15,20 @@ const ConfiguratorRadioGroup = <TOption extends RadioGroupOption>({
 }: {
   label: string;
   options: Readonly<TOption[]>;
-  value: TOption["value"];
+  value: TOption["value"] | undefined;
   onChange: (newValue: TOption["value"]) => void;
 }) => {
   return (
-    <RadioGroup value={value} onChange={onChange}>
-      <RadioGroup.Label>{label}</RadioGroup.Label>
+    <RadioGroup value={value} onChange={onChange} className="space-y-2">
+      <RadioGroup.Label as={InputLabel}>{label}</RadioGroup.Label>
 
       <div className="flex space-x-4">
         {options.map((option) => (
           <RadioGroup.Option
-            key={option.value}
+            key={option.name}
             value={option.value}
-            className="cursor-pointer select-none rounded border-2 border-transparent px-4 py-2 hover:border-gray-700 ui-checked:border-gray-400"
+            title={option.title}
+            className="cursor-pointer text-lg select-none rounded border-2 border-gray-900 px-4 py-2 hover:border-gray-700 ui-checked:border-gray-400"
           >
             {option.name}
           </RadioGroup.Option>

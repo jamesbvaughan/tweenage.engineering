@@ -12,13 +12,23 @@ export const calculateLegRailLength = (
     : deskHeight - 2 * railHeight;
 };
 
-export const calculateCrossbarLength = (
-  deskHeight: number,
+export const calculateSideCrossbarLength = (
+  frameHeight: number,
+  deskDepth: number,
+  crossbarOffset: number
+) => {
+  return Math.sqrt(
+    Math.pow(deskDepth, 2) + Math.pow(frameHeight - crossbarOffset, 2)
+  ) - (inch);
+};
+
+export const calculateRearCrossbarLength = (
+  frameHeight: number,
   deskWidth: number,
   crossbarOffset: number
 ) => {
   return Math.sqrt(
-    Math.pow(deskWidth, 2) + Math.pow(deskHeight - crossbarOffset, 2)
+    Math.pow(deskWidth, 2) + Math.pow(frameHeight - crossbarOffset, 2)
   ) - (0.5 * inch);
 };
 
