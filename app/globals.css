@@ -15,4 +15,7 @@
   h4 {
     @apply text-2xl;
   }
+  h5 {
+    @apply text-xl;
+  }
 }
