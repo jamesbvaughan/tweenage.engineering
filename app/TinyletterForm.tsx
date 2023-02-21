@@ -20,7 +20,7 @@ export default function TinyletterForm() {
       <div className="flex flex-col md:flex-row items-center space-x-2">
         <label
           htmlFor="tlemail"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-gray-700"
         >
           subscribe for updates
         </label>
