@@ -38,7 +38,7 @@ export interface ConfiguratorState {
 
 const defaultState: ConfiguratorState = {
   width: convert(48, "inches").to("meters"),
-  height: convert(37, "inches").to("meters"),
+  height: convert(30, "inches").to("meters"),
   depth: convert(24, "inches").to("meters"),
   cuttingAluminumIsOkay: true,
   desktopPlacement: "top",
