@@ -1,13 +1,35 @@
+import { PropsWithChildren } from "react";
+
 import TinyletterForm from "./TinyletterForm";
 
-export default function Footer() {
+const FooterLink = ({
+  href,
+  children,
+}: PropsWithChildren<{ href: string }>) => {
   return (
-    <div className="flex flex-col items-center space-y-4">
-        <div className="text-gray-700">
-          made by <a href="https://jamesbvaughan.com">james vaughan</a>
-        </div>
+    <a href={href} className="text-gray-700 hover:text-gray-800">
+      {children}
+    </a>
+  );
+};
 
-        <TinyletterForm />
+const Footer = () => {
+  return (
+    <div className="flex items-center justify-center space-x-4 text-gray-700">
+      <div>
+        made by{" "}
+        <FooterLink href="https://jamesbvaughan.com">james vaughan</FooterLink>
+      </div>
+      <div>&middot;</div>
+      <div>
+        <FooterLink href="https://github.com/jamesbvaughan/tweenage.engineering">
+          website source
+        </FooterLink>
+      </div>
+      <div>&middot;</div>
+      <TinyletterForm />
     </div>
   );
-}
+};
+
+export default Footer;
