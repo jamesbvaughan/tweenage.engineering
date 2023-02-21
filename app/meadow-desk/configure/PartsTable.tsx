@@ -47,21 +47,15 @@ const PartsTableRow = ({ entry }: { entry: PartsListEntry }) => {
   const partNameLink = (
     <>
       <div className="font-medium">
-        <a
-          href={entry.url}
-          target="_blank"
-          rel="noreferrer"
-          className="group"
-        >
-          <span className="group-hover:underline underline-offset-2">
-          {entry.name}
-          </span>
-          {" "}
+        <a href={entry.url} target="_blank" rel="noreferrer" className="group">
+          <span className="underline-offset-2 group-hover:underline">
+            {entry.name}
+          </span>{" "}
           <ArrowTopRightOnSquareIcon className="inline h-5 w-5 shrink-0 text-gray-700" />
         </a>
       </div>
 
-      <div className="mt-0.5 sm:hidden text-gray-600">
+      <div className="mt-0.5 text-gray-600 sm:hidden">
         {entry.count} x ${entry.costPerPart.toFixed(2)}
       </div>
     </>
@@ -227,6 +221,11 @@ const PartsTable = () => {
             here
           </DescriptionLink>
           .
+          <br />
+          <DescriptionLink href="https://www.youtube.com/playlist?list=PLrgoDzr3JjI0k8XaSgWpfBlN8dW9X6BwF">
+            This YouTube playlist from 80/20
+          </DescriptionLink>{" "}
+          gives a good overview of each of their offerrings.
         </div>
       ),
     },
