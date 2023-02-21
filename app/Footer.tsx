@@ -13,20 +13,24 @@ const FooterLink = ({
   );
 };
 
+const Dot = () => {
+  return <div className="hidden sm:block">&middot;</div>;
+};
+
 const Footer = () => {
   return (
-    <div className="flex items-center justify-center space-x-4 text-gray-700">
+    <div className="flex flex-col sm:items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 text-gray-700 sm:flex-row">
       <div>
         made by{" "}
         <FooterLink href="https://jamesbvaughan.com">james vaughan</FooterLink>
       </div>
-      <div>&middot;</div>
+      <Dot />
       <div>
         <FooterLink href="https://github.com/jamesbvaughan/tweenage.engineering">
           website source
         </FooterLink>
       </div>
-      <div>&middot;</div>
+      <Dot />
       <TinyletterForm />
     </div>
   );

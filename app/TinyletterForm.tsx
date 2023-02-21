@@ -17,7 +17,7 @@ export default function TinyletterForm() {
         return true;
       }}
     >
-      <div className="flex flex-col md:flex-row items-center space-x-2">
+      <div className="flex justify-center items-center space-x-2">
         <label
           htmlFor="tlemail"
           className="block text-gray-700"
