@@ -7,7 +7,7 @@ export default function ConfigurePage() {
     <main className="space-y-12">
       <div className="space-y-6">
         <h2>configure your meadow desk</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
+        <div className="grid grid-cols-1 gap-1 lg:grid-cols-3">
           <div className="space-y-2">
             <ConfigurationForm />
           </div>
@@ -20,6 +20,10 @@ export default function ConfigurePage() {
 
       <div className="space-y-2">
         <h2>bill of materials</h2>
+        <p className="text-sm">
+          These are the parts you&apos;ll need to get in order to build the desk as
+          you&apos;ve configured it.
+        </p>
         <PartsTable />
       </div>
     </main>
