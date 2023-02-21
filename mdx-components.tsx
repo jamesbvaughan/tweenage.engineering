@@ -1,12 +1,12 @@
 import type { MDXComponents } from "mdx/types";
 
-// This file is required to use MDX in `app` directory.
-export function useMDXComponents(components: MDXComponents): MDXComponents {
+export const useMDXComponents = (components: MDXComponents): MDXComponents => {
   return {
-    // Allows customizing built-in components, e.g. to add styling.
-    // h1: ({ children }) => <h1 className=''>{children}</h1>,
-    h2: ({ children }) => <h2 className="font-mono mt-8 mb-4">{children}</h2>,
+    h1: ({ children }) => <h1 className="font-mono mt-10 mb-4">{children}</h1>,
+    h2: ({ children }) => <h2 className="font-mono mt-10 mb-4">{children}</h2>,
     h3: ({ children }) => <h3 className="font-mono mt-6 mb-4">{children}</h3>,
+    h4: ({ children }) => <h4 className="font-mono mt-6 mb-2">{children}</h4>,
+    h5: ({ children }) => <h5 className="font-mono mt-6 mb-4">{children}</h5>,
     p: ({ children }) => <p className="my-3">{children}</p>,
     a: ({ children, ...props }) => (
       <a className="text-gray-500" {...props}>
