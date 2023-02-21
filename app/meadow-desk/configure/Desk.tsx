@@ -1,5 +1,5 @@
 import { Box } from "@react-three/drei";
-import { ComponentProps } from "react";
+import { ComponentProps, useMemo } from "react";
 import { Euler } from "three";
 import Bumper from "./Bumper";
 
@@ -12,7 +12,10 @@ import {
   crossbarWidth,
 } from "./constants";
 import Hotdog from "./Hotdog";
-import { aluminumMaterial, plywoodBoxMaterials } from "./materials";
+import {
+  aluminumMaterial,
+  getPlywoodBoxMaterials,
+} from "./materials";
 import Rail from "./Rail";
 import SingleGusset from "./SingleGusset";
 import {
@@ -68,6 +71,8 @@ const Desktop = (groupProps: ComponentProps<"group">) => {
     railHeight,
     desktopPlacement
   );
+
+  const plywoodBoxMaterials = useMemo(getPlywoodBoxMaterials, []);
 
   return (
     <group {...groupProps}>
@@ -175,13 +180,21 @@ const SideCrossbars = () => {
       <Crossbar // Left crossbar
         rotation={new Euler(sideCrossbarAngle, Math.PI / 2, 0)}
         scale={[1, sideCrossbarLength, 1]}
-        position={[width + crossbarThickness / 2, (height - desktopThickness) / 2, depth / 2]}
+        position={[
+          width + crossbarThickness / 2,
+          (height - desktopThickness) / 2,
+          depth / 2,
+        ]}
       />
 
       <Crossbar // Right crossbar
         rotation={new Euler(sideCrossbarAngle, Math.PI / 2, 0)}
         scale={[1, sideCrossbarLength, 1]}
-        position={[-crossbarThickness / 2, (height - desktopThickness) / 2, depth / 2]}
+        position={[
+          -crossbarThickness / 2,
+          (height - desktopThickness) / 2,
+          depth / 2,
+        ]}
       />
     </group>
   );

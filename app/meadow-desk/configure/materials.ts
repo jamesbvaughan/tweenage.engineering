@@ -15,21 +15,26 @@ export const rubberMaterial = new MeshStandardMaterial({
 
 const woodColor = "#b7924d";
 
-const plywoodEdgeMaterial = new MeshStandardMaterial({
-  color: woodColor,
-  map: loader.load("/plywood-edge.jpeg"),
-});
+// I'm exporting a function rather than the materials themselves here because
+// next.js explodes trying to  execute those loader.load() calls during
+// compilation.
+export const getPlywoodBoxMaterials = () => {
+  const plywoodEdgeMaterial = new MeshStandardMaterial({
+    color: woodColor,
+    map: loader.load("/plywood-edge.jpeg"),
+  });
 
-const plywoodFaceMaterial = new MeshStandardMaterial({
-  color: woodColor,
-  map: loader.load("/wood-face.jpg"),
-});
+  const plywoodFaceMaterial = new MeshStandardMaterial({
+    color: woodColor,
+    map: loader.load("/wood-face.jpg"),
+  });
 
-export const plywoodBoxMaterials = [
-  plywoodEdgeMaterial,
-  plywoodEdgeMaterial,
-  plywoodFaceMaterial,
-  plywoodFaceMaterial,
-  plywoodEdgeMaterial,
-  plywoodEdgeMaterial,
-];
+  return [
+    plywoodEdgeMaterial,
+    plywoodEdgeMaterial,
+    plywoodFaceMaterial,
+    plywoodFaceMaterial,
+    plywoodEdgeMaterial,
+    plywoodEdgeMaterial,
+  ];
+}
