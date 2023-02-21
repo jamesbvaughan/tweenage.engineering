@@ -51,14 +51,17 @@ const PartsTableRow = ({ entry }: { entry: PartsListEntry }) => {
           href={entry.url}
           target="_blank"
           rel="noreferrer"
-          className="flex underline-offset-2 hover:underline items-center space-x-2"
+          className="group"
         >
-          <div>{entry.name}</div>
-          <ArrowTopRightOnSquareIcon className="h-5 w-5 text-gray-700" />
+          <span className="group-hover:underline underline-offset-2">
+          {entry.name}
+          </span>
+          {" "}
+          <ArrowTopRightOnSquareIcon className="inline h-5 w-5 shrink-0 text-gray-700" />
         </a>
       </div>
 
-      <div className="mt-0.5 sm:hidden">
+      <div className="mt-0.5 sm:hidden text-gray-600">
         {entry.count} x ${entry.costPerPart.toFixed(2)}
       </div>
     </>
