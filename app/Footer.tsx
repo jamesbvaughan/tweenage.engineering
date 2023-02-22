@@ -26,6 +26,12 @@ const Footer = () => {
       </div>
       <Dot />
       <div>
+        <FooterLink href="mailto:james@jamesbvaughan.com">
+          contact
+        </FooterLink>
+      </div>
+      <Dot />
+      <div>
         <FooterLink href="https://github.com/jamesbvaughan/tweenage.engineering">
           website source
         </FooterLink>
