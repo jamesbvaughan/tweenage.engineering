@@ -20,8 +20,8 @@ const ModelCanvas = () => {
 
       <OrbitControls
         enableDamping={false}
-        // enablePan={false}
-        // enableZoom={false}
+        enablePan={false}
+        enableZoom={false}
       />
 
       <Desk />
