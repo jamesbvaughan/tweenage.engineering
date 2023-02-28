@@ -17,11 +17,8 @@ export default function TinyletterForm() {
         return true;
       }}
     >
-      <div className="flex justify-center items-center space-x-2">
-        <label
-          htmlFor="tlemail"
-          className="block text-gray-700"
-        >
+      <div className="flex items-center justify-center space-x-2">
+        <label htmlFor="tlemail" className="block text-gray-700">
           subscribe for updates
         </label>
 
@@ -37,7 +34,7 @@ export default function TinyletterForm() {
             type="email"
             name="email"
             id="tlemail"
-            className="block w-full rounded-md text-gray-700 placeholder-gray-800 bg-dark pl-10 focus:border-gray-800 focus:ring-gray-800 sm:text-sm border-none"
+            className="block w-full rounded-md border-none bg-dark pl-10 text-gray-700 placeholder-gray-800 focus:border-gray-800 focus:ring-gray-800 sm:text-sm"
             placeholder="you@example.com"
           />
         </div>

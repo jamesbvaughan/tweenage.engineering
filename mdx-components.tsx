@@ -2,11 +2,11 @@ import type { MDXComponents } from "mdx/types";
 
 export const useMDXComponents = (components: MDXComponents): MDXComponents => {
   return {
-    h1: ({ children }) => <h1 className="font-mono mt-10 mb-4">{children}</h1>,
-    h2: ({ children }) => <h2 className="font-mono mt-10 mb-4">{children}</h2>,
-    h3: ({ children }) => <h3 className="font-mono mt-6 mb-4">{children}</h3>,
-    h4: ({ children }) => <h4 className="font-mono mt-6 mb-2">{children}</h4>,
-    h5: ({ children }) => <h5 className="font-mono mt-6 mb-4">{children}</h5>,
+    h1: ({ children }) => <h1 className="mt-10 mb-4 font-mono">{children}</h1>,
+    h2: ({ children }) => <h2 className="mt-10 mb-4 font-mono">{children}</h2>,
+    h3: ({ children }) => <h3 className="mt-6 mb-4 font-mono">{children}</h3>,
+    h4: ({ children }) => <h4 className="mt-6 mb-2 font-mono">{children}</h4>,
+    h5: ({ children }) => <h5 className="mt-6 mb-4 font-mono">{children}</h5>,
     p: ({ children }) => <p className="my-3">{children}</p>,
     a: ({ children, ...props }) => (
       <a className="text-gray-500" {...props}>
@@ -22,4 +22,4 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
     hr: () => <hr className="my-6 border-t border-gray-800" />,
     ...components,
   };
-}
+};

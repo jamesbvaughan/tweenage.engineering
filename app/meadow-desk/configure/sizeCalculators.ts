@@ -17,9 +17,11 @@ export const calculateSideCrossbarLength = (
   deskDepth: number,
   crossbarOffset: number
 ) => {
-  return Math.sqrt(
-    Math.pow(deskDepth, 2) + Math.pow(frameHeight - crossbarOffset, 2)
-  ) - (inch);
+  return (
+    Math.sqrt(
+      Math.pow(deskDepth, 2) + Math.pow(frameHeight - crossbarOffset, 2)
+    ) - inch
+  );
 };
 
 export const calculateRearCrossbarLength = (
@@ -27,9 +29,12 @@ export const calculateRearCrossbarLength = (
   deskWidth: number,
   crossbarOffset: number
 ) => {
-  return Math.sqrt(
-    Math.pow(deskWidth, 2) + Math.pow(frameHeight - crossbarOffset, 2)
-  ) - (0.5 * inch);
+  return (
+    Math.sqrt(
+      Math.pow(deskWidth, 2) + Math.pow(frameHeight - crossbarOffset, 2)
+    ) -
+    0.5 * inch
+  );
 };
 
 export const calculateDesktopWidth = (

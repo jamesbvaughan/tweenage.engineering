@@ -5,8 +5,8 @@ export const calculateDesktopCost = () => {
 
   // Based on this plywood:
   //   https://www.homedepot.com/p/Columbia-Forest-Products-1-2-in-x-2-ft-x-4-ft-Europly-Maple-Plywood-Project-Panel-Free-Custom-Cut-Available-3691/207004189
-  return 43.99
-}
+  return 43.99;
+};
 
 export const calculateRailCostMcMaster = (meters: number) => {
   const railDollarsPerInch = 0.79;

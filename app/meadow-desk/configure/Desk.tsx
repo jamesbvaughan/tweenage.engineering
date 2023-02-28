@@ -12,10 +12,7 @@ import {
   crossbarWidth,
 } from "./constants";
 import Hotdog from "./Hotdog";
-import {
-  aluminumMaterial,
-  getPlywoodBoxMaterials,
-} from "./materials";
+import { aluminumMaterial, getPlywoodBoxMaterials } from "./materials";
 import Rail from "./Rail";
 import SingleGusset from "./SingleGusset";
 import {

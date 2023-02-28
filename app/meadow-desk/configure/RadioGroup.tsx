@@ -28,7 +28,7 @@ const ConfiguratorRadioGroup = <TOption extends RadioGroupOption>({
             key={option.name}
             value={option.value}
             title={option.title}
-            className="cursor-pointer text-lg select-none rounded border-2 border-gray-900 px-4 py-2 hover:border-gray-700 ui-checked:border-gray-400"
+            className="cursor-pointer select-none rounded border-2 border-gray-900 px-4 py-2 text-lg hover:border-gray-700 ui-checked:border-gray-400"
           >
             {option.name}
           </RadioGroup.Option>

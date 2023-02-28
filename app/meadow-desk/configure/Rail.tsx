@@ -6,14 +6,12 @@ import { inch } from "./constants";
 import { aluminumMaterial } from "./materials";
 import { useConfiguratorStore } from "./store";
 
-useGLTF.preload("/new-rail.glb");
-
-const sequence = [...Array(66).keys()];
+useGLTF.preload("/models/t-slot.glb");
 
 const railHeightInModel = inch;
 
 const Rail = (props: ComponentProps<"group">) => {
-  const { nodes } = useGLTF("/new-rail.glb") as unknown as {
+  const { nodes } = useGLTF("/models/t-slot.glb") as unknown as {
     nodes: Record<string, Mesh>;
   };
 
@@ -32,15 +30,12 @@ const Rail = (props: ComponentProps<"group">) => {
         ]}
       >
         <group position={[offset, offset, offset]}>
-          {sequence.map((i) => (
-            <mesh
-              key={i}
-              castShadow
-              receiveShadow
-              geometry={nodes[`1010-S-1-CL_${i + 1}`].geometry}
-              material={aluminumMaterial}
-            />
-          ))}
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes["1010-S-1-CL"].geometry}
+            material={aluminumMaterial}
+          />
         </group>
       </group>
     </group>

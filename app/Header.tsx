@@ -2,12 +2,7 @@ import Link, { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
 
 const HeaderLink = (props: PropsWithChildren<LinkProps>) => {
-  return (
-    <Link
-      {...props}
-      className="text-lg hover:text-gray-400"
-    />
-  );
+  return <Link {...props} className="text-lg hover:text-gray-400" />;
 };
 
 export default function Header() {
@@ -21,7 +16,9 @@ export default function Header() {
       </Link>
 
       <div className="flex space-x-6">
-        <HeaderLink href="/meadow-desk/configure">configuration tool</HeaderLink>
+        <HeaderLink href="/meadow-desk/configure">
+          configuration tool
+        </HeaderLink>
         <HeaderLink href="/about">about</HeaderLink>
       </div>
     </div>

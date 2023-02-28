@@ -10,10 +10,10 @@ import { useGLTF } from "@react-three/drei";
 import { ComponentProps } from "react";
 import type { Mesh, Material } from "three";
 
-useGLTF.preload("/hotdog.glb");
+useGLTF.preload("/models/hotdog.glb");
 
 const Hotdog = (props: ComponentProps<"group">) => {
-  const { nodes, materials } = useGLTF("/hotdog.glb") as unknown as {
+  const { nodes, materials } = useGLTF("/models/hotdog.glb") as unknown as {
     nodes: Record<string, Mesh>;
     materials: Record<string, Material>;
   };

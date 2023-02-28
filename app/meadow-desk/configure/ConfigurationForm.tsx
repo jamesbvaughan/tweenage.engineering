@@ -41,25 +41,25 @@ const overallPresets: {
   value: Partial<ConfiguratorState>;
   name: string;
 }[] = [
-    {
-      value: {
-        width: convert(48, "inches").to("meters"),
-        depth: convert(24, "inches").to("meters"),
-        height: convert(37, "inches").to("meters"),
-        desktopPlacement: "top",
-      },
-      name: "james' desk",
+  {
+    value: {
+      width: convert(48, "inches").to("meters"),
+      depth: convert(24, "inches").to("meters"),
+      height: convert(37, "inches").to("meters"),
+      desktopPlacement: "top",
     },
-    {
-      value: {
-        width: 1.195,
-        depth: 0.77,
-        height: 0.75,
-        desktopPlacement: "inset",
-      },
-      name: "field desk",
+    name: "james' desk",
+  },
+  {
+    value: {
+      width: 1.195,
+      depth: 0.77,
+      height: 0.75,
+      desktopPlacement: "inset",
     },
-  ];
+    name: "field desk",
+  },
+];
 
 const OverallPresets = () => {
   const store = useConfiguratorStore();

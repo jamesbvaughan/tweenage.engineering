@@ -188,8 +188,9 @@ const PartsTable = () => {
     },
     {
       id: "side-crossbars",
-      name: `Aluminum for side crossbars (${sideCrossbarLength <= convert(3, "feet").to("meters") ? 3 : 6
-        }')`,
+      name: `Aluminum for side crossbars (${
+        sideCrossbarLength <= convert(3, "feet").to("meters") ? 3 : 6
+      }')`,
       count: 2,
       costPerPart:
         sideCrossbarLength <= convert(3, "feet").to("meters") ? 3.37 : 5.92,

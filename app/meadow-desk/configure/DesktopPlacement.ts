@@ -1,1 +1,1 @@
-export type DesktopPlacement = "top" | "inset"
+export type DesktopPlacement = "top" | "inset";

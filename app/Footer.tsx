@@ -19,16 +19,14 @@ const Dot = () => {
 
 const Footer = () => {
   return (
-    <div className="flex flex-col sm:items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 text-gray-700 sm:flex-row">
+    <div className="flex flex-col justify-center space-y-4 text-gray-700 sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4">
       <div>
         made by{" "}
         <FooterLink href="https://jamesbvaughan.com">james vaughan</FooterLink>
       </div>
       <Dot />
       <div>
-        <FooterLink href="mailto:james@jamesbvaughan.com">
-          contact
-        </FooterLink>
+        <FooterLink href="mailto:james@jamesbvaughan.com">contact</FooterLink>
       </div>
       <Dot />
       <div>

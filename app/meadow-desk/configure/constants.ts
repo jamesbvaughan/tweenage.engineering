@@ -11,5 +11,5 @@ export const crossbarWidth = convert(1 / 2, "inches").to("meters");
 export const crossbarOffset = convert(6, "inches").to("meters");
 
 export const bumperHeight = convert(0.563, "inches").to("meters");
-export const bumperRadius = halfInch
-export const bumperOffset = halfInch
+export const bumperRadius = halfInch;
+export const bumperOffset = halfInch;

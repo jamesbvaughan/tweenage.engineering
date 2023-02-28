@@ -4,27 +4,22 @@ import { Euler, Mesh } from "three";
 
 import { rubberMaterial } from "./materials";
 
-useGLTF.preload("/bumper.glb");
-
-const sequence = [...Array(60).keys()];
+useGLTF.preload("/models/bumper.glb");
 
 const Bumper = (props: ComponentProps<"group">) => {
-  const { nodes } = useGLTF("/bumper.glb") as unknown as {
+  const { nodes } = useGLTF("/models/bumper.glb") as unknown as {
     nodes: Record<string, Mesh>;
   };
 
   return (
     <group {...props} dispose={null}>
-      {sequence.map((i) => (
-        <mesh
-          key={i}
-          castShadow
-          receiveShadow
-          geometry={nodes[`SOLID_${i + 1}`].geometry}
-          material={rubberMaterial}
-          rotation={new Euler(-Math.PI / 2, 0, 0)}
-        />
-      ))}
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.SOLID.geometry}
+        material={rubberMaterial}
+        rotation={new Euler(-Math.PI / 2, 0, 0)}
+      />
     </group>
   );
 };

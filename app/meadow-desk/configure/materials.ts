@@ -11,7 +11,7 @@ export const aluminumMaterial = new MeshStandardMaterial({
 export const rubberMaterial = new MeshStandardMaterial({
   color: "#111111",
   roughness: 0.9,
-})
+});
 
 const woodColor = "#b7924d";
 
@@ -21,12 +21,12 @@ const woodColor = "#b7924d";
 export const getPlywoodBoxMaterials = () => {
   const plywoodEdgeMaterial = new MeshStandardMaterial({
     color: woodColor,
-    map: loader.load("/plywood-edge.jpeg"),
+    map: loader.load("/images/plywood-edge.jpg"),
   });
 
   const plywoodFaceMaterial = new MeshStandardMaterial({
     color: woodColor,
-    map: loader.load("/wood-face.jpg"),
+    map: loader.load("/images/wood-face.jpg"),
   });
 
   return [
@@ -37,4 +37,4 @@ export const getPlywoodBoxMaterials = () => {
     plywoodEdgeMaterial,
     plywoodEdgeMaterial,
   ];
-}
+};
