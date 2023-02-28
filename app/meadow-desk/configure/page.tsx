@@ -20,11 +20,18 @@ export default function ConfigurePage() {
 
       <div className="space-y-2">
         <h2>bill of materials</h2>
-        <p className="text-sm">
+        <p>
           These are the parts you&apos;ll need to get in order to build the desk
           as you&apos;ve configured it.
         </p>
         <PartsTable />
+      </div>
+
+      <div className="space-y-2">
+        <h2>assembly instructions</h2>
+        <p className="italic">
+          Coming soon!
+        </p>
       </div>
     </main>
   );
