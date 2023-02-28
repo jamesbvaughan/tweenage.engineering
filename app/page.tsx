@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import meadowDeskPic from "../public/images/meadow-desk.jpg";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="space-y-10">
       <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
@@ -34,4 +34,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

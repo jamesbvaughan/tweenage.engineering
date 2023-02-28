@@ -2,7 +2,7 @@
 
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
 
-export default function TinyletterForm() {
+const TinyletterForm = () => {
   return (
     <form
       action="https://tinyletter.com/tweenage-engineering"
@@ -43,4 +43,6 @@ export default function TinyletterForm() {
       <input type="hidden" value="1" name="embed" />
     </form>
   );
-}
+};
+
+export default TinyletterForm;

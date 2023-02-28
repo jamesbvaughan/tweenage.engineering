@@ -2,7 +2,7 @@ import ConfigurationForm from "./ConfigurationForm";
 import ModelCanvas from "./ModelCanvas";
 import PartsTable from "./PartsTable";
 
-export default function ConfigurePage() {
+const ConfigurePage = () => {
   return (
     <main className="space-y-12">
       <div className="space-y-6">
@@ -36,3 +36,5 @@ export default function ConfigurePage() {
     </main>
   );
 }
+
+export default ConfigurePage;

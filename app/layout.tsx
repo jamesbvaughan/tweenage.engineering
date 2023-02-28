@@ -2,23 +2,25 @@ import "./globals.css";
 
 import classNames from "classnames";
 
-import { inter, berkeleyMono } from "./fonts";
-import { AnalyticsWrapper } from "./AnalyticsWrapper";
-import Header from "./Header";
+import type { Metadata } from "next";
+import AnalyticsWrapper from "./AnalyticsWrapper";
+import { berkeleyMono, inter } from "./fonts";
 import Footer from "./Footer";
+import Header from "./Header";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const metadata: Metadata = {
+  title: "tweenage engineering",
+  description:
+    "Free-to-use plans for thoughtfully designed tools and furniture",
+  icons: "/favicon.ico",
+};
+
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html
       lang="en"
       className={classNames(inter.variable, berkeleyMono.variable)}
     >
-      <head />
-
       <body className="mb-6 bg-black text-white">
         <div className="mx-auto w-11/12 md:w-10/12">
           <Header />
@@ -34,4 +36,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

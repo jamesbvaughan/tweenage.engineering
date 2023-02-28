@@ -5,7 +5,7 @@ const HeaderLink = (props: PropsWithChildren<LinkProps>) => {
   return <Link {...props} className="text-lg hover:text-gray-400" />;
 };
 
-export default function Header() {
+const Header = () => {
   return (
     <div className="w-full items-end justify-between space-y-4 py-4 sm:flex">
       <Link
@@ -23,4 +23,6 @@ export default function Header() {
       </div>
     </div>
   );
-}
+};
+
+export default Header;
